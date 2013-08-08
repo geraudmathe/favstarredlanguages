@@ -18,8 +18,6 @@ class SmithApp < Sinatra::Application
     haml :index, locals: { languages: languages, username: username }
   end
 
-
-
 end
 
 require_relative 'lib/user_languages'

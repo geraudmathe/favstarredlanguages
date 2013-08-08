@@ -1,16 +1,3 @@
-$(function() {
-
-  redirectToUsername($("#nav-form"));
-
-  var ctx = $("#chart").get(0).getContext("2d");
-  var username = $("body").data('username');
-
-  $.getJSON('/' + username + '.json', function(json) {
-    new Chart(ctx).Radar(json);
-  });
-
-});
-
 var redirectToUsername = function(form) {
   $(form).on('submit', function(event) {
     event.preventDefault();
@@ -18,3 +5,15 @@ var redirectToUsername = function(form) {
     window.location.href = "/" + username;
   });
 };
+
+$(function() {
+
+  redirectToUsername($("#nav-form"));
+
+  var radar_canvas = $("#radar-chart").get(0).getContext("2d");
+  var username = $("body").data('username');
+  $.getJSON('/' + username + '.json', function(json) {
+    new Chart(radar_canvas).Radar(json);
+  });
+
+});
