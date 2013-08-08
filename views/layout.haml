@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title StarApp
+    %link{rel: "stylesheet", href: "/css/bootstrap.css"}
+  %body{:"data-username" => locals[:username]}
+    %div{class: "navbar navbar-inverse navbar-static-top"}
+      %a{class: "navbar-brand", href: "/"} StarApp
+      %form{class: "navbar-form pull-left", action: "/", method: "get", id: "nav-form"}
+        %input{type: "text", class: "form-control", style: "width: 200px;", placeholder: "GitHub username", name: "username", value: username}
+        %button{type: "submit", class: "btn btn-primary"} Get languages
+    %div{class: "container"}
+      %div{class: "row"}
+        %div{class: "col-lg-6 col-lg-offset-3"}
+          = yield
+    %script{src: "/js/Chart.js"}
+    %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+    %script{src: "/js/main.js"}

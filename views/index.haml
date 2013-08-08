@@ -1,0 +1,8 @@
+%div{class: "row"}
+  %div{class: "col-4"}
+    %h4= "#{locals[:username]}&rsquo;s starred languages"
+    %ul
+      - locals[:languages].each do |language, repos|
+        %li= "#{language} (#{repos.count} repos)"
+  %div{class: "col-8"}
+    %canvas{id: 'chart', width: 400, height: 400}
