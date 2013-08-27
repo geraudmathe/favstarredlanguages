@@ -1,0 +1,34 @@
+<script type="text/x-handlebars">
+  <div class='navbar navbar-inverse navbar-static-top'>
+    {{#linkTo "home" }}StarApp{{/linkTo}}
+    <a class='navbar-brand' href='/'></a>
+    <form action='/' class='navbar-form pull-left' id='nav-form' method='get'>
+      {{view Ember.TextField valueBinding="username" class="form-control" placeholder="GitHub username"}}
+      <button class='btn btn-primary' type='submit' {{action "submit"}}>Get languages</button>
+    </form>
+  </div>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-12'>
+        
+        {{outlet}}
+        <small>
+          by
+          <a href='http://sleepykyoto.com'>@niceguyjames</a>
+           and 
+          <a href='http://twitter.com/papiersdundev'>@geraudmathe</a>
+          &middot;
+          <a href='https://github.com/niceguyjames/favstarredlanguages'>fork</a>
+        </small>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="user">
+  <h1>Paste a Github name Above</h1>
+</script>
+
+<script type="text/x-handlebars" data-template-name="user">
+  user
+</script>

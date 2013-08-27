@@ -3,3 +3,6 @@ canvas {
   max-width: 400px;
   height: auto !important;
 }
+.navbar-form input[type='text']{
+  width: 200px;
+}

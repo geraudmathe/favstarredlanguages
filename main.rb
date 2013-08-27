@@ -5,7 +5,7 @@ class SmithApp < Sinatra::Application
   end
 
   get '/' do
-    redirect to('/niceguyjames')
+    erb :index
   end
 
   get '/*.json' do |username|
