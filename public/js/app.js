@@ -5,6 +5,8 @@ App.Router.map(function(){
   this.route("user", {path: "user/:username"})
 })
 
+App.Store = DS.Store.extend()
+
 App.UserRoute = Ember.Route.extend({
   model:function(params){
     console.log(params)
@@ -17,4 +19,8 @@ App.ApplicationController = Ember.ObjectController.extend({
     username = this.get("username");
     this.transitionToRoute("user", username);
   }
+})
+
+App.User = DS.Model.extend({
+
 })
